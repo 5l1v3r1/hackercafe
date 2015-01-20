@@ -219,7 +219,6 @@ grunt.loadNpmTasks('grunt-gh-pages');
             '*.{ico,png,txt,svg}',
             'fonts/{,*/}*.*',
             '.htaccess',
-            'CNAME',
             'images/{,*/}*.{webp,gif,svg}'
           ]
         }]

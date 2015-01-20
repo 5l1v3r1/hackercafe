@@ -6531,4 +6531,9 @@ footer i {
 .half-bg {
   background: #12addd;
 }
+@media (max-width: 768px) {
+  .col-xs-6 {
+    width: 49%;
+  }
+}
 /*# sourceMappingURL=/styles/main.css.map */
