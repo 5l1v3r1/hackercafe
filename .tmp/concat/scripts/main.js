@@ -9640,28 +9640,50 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 })( jQuery );
 
 function resizePages() {
-	var h = $(window).height();
-	var height  =  h > 750 ? 750 : h;
-	$('section').css('height',height);
-   /* $('firstSection').css('height',height*0.98);*/
+    var h = $(window).height();
+    var height = h > 850 ? 850 : h;
+    $('.fullscreen').css('height', height);
+    /* $('firstSection').css('height',height*0.98);*/
 }
 
-$(window).resize(function(e) {
+$(window).resize(function (e) {
     resizePages();
 });
 resizePages();
 
+$(document).ready(function () {
 
 
-$("#home h1").fitText(1.2, { minFontSize: '40px', maxFontSize: '90px' });
+    $("#info h2").fitText(1.2, {
+        minFontSize: '30px',
+        maxFontSize: '46px'
+    });
+
+    $("#location h2").fitText(1.2, {
+        minFontSize: '30px',
+        maxFontSize: '60px'
+    });
 
 
-$("h2").fitText(1.2, { minFontSize: '30px', maxFontSize: '60px' });
+    $("#pricing h2").fitText(1.2, {
+        minFontSize: '30px',
+        maxFontSize: '50px'
+    });
+    $('.sub-headline').fitText(1.7, {
+        minFontSize: '10px',
+        maxFontSize: '40px'
+    });
 
-$('.sub-headline').fitText(1.7, { minFontSize: '10px', maxFontSize: '40px' });
 
-$("h3").fitText(1.2, { minFontSize: '50px', maxFontSize: '90px' });
+    $('#features h3').fitText(1.4, {
+        minFontSize: '15px',
+        maxFontSize: '45px'
+    });
 
+    $("#contact h3").fitText(1.2, {
+        minFontSize: '35px',
+        maxFontSize: '55px'
+    });
 
 
 
@@ -9672,8 +9694,20 @@ $("h3").fitText(1.2, { minFontSize: '50px', maxFontSize: '90px' });
             if (target.length) {
                 $('html,body').animate({
                     scrollTop: target.offset().top
-                }, 1000);
+                }, 1000, 'swing');
                 return false;
             }
         }
     });
+    /*   $('.btn-cta').click(function (e) {
+      e.preventDefault();
+        $(this).addClass('bounce');
+    })*/
+
+
+   /* if (documentWidth == (windowWidth + scrollOffset)) {
+        $('#btnTop').fadeIn();
+    }*/
+
+
+});

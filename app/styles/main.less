@@ -1,18 +1,26 @@
 @import "../bower_components/bootstrap/less/bootstrap.less";
+
+
+
+@import "global";
+@import "buttons";
 @icon-font-path: "../fonts/glyphicons/";
 
 @font-family-sans-serif:  "Open Sans","Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-base:        @font-family-sans-serif;
 
+@headings-font-family:  "Nunito","Helvetica Neue", Helvetica, Arial, sans-serif;
 
 
-@red: #EB7260;
-@light-blue: #77C5F7;
-@dark-blue: #354458;
-
-
+// Brand colors
+@orange: #fbad17;
+@blue: #12addd;
+@dark-blue: #343f51;
+@white: #fff;
+@green: #8ec63f;
+@red: #dd4212;
 @text-color: @dark-blue;
-
+@border-radius-base:  5px;   
 
 body {
     max-width: 2300px;
@@ -23,8 +31,7 @@ section {
     height: 600px;
     background: #fDFFfD;
     padding: 1px;
-    min-height: 400px!important;
-
+    min-height: 450px!important;
 }
 
 .wrap {
@@ -37,27 +44,70 @@ section {
 
 
 h2 {
-    font-size: 40px;
+    font-size: 20px;
         color:#fff;
     font-weight:100;
     text-align: center;
-
+ text-transform: uppercase;
 }
 
 h3 {
-    font-weight: 700;
-    font-size: 100px;
-    line-height: 1.5;
+    font-weight: 200;
+    line-height: 1.2;
       color: #fff;
     text-align: center;
+     text-transform: uppercase;
     }
 
+#features {
+    text-align: center;
+    h3 {
+        color: @text-color;
+        font-size:38px;
+
+    }
+    img {
+        margin: 0 auto;
+        display:block;
+        width: 200px;
+    }
+
+    p {
+        text-align: center;
+        font-size: 21px;
+    }
+    i {
+        font-size: 100px;
+        margin: 0 auto;
+                &:hover {
+            .animated;
+            .pulse;
+        }
+    }
+    .blue {
+        color: @blue;
+    }
+        .green {
+        color: @green;
+    }
+            .orange {
+        color: @orange;
+    }
+    .icon-container {
+
+    }
+       @media (max-width: 500px) {
+       i {
+           font-size: 50px;
+       }
+    }
+}
 
 #info {
-    background: #f5f5f5;
+
     h2 {
-    text-align: center;
-    color: @text-color;
+        text-align: center;
+        color: @text-color;
         font-size: 30px;
     }
     p {
@@ -71,11 +121,23 @@ h3 {
        padding: 0 15px;
     }
     }
+    img {
+        margin: 30px auto;
+        display:block;
+    }
+        background: #f9f9f9;
 }
 
 
 #location {
-    background: #fff url("../images/utrecht.jpg") no-repeat center;
+     h2 {
+         span {
+             font-size: 120%;
+             font-weight: 400;
+         }
+     }
+    background: @green;
+
     ackground-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -90,9 +152,29 @@ h3 {
         text-align:center;
 }
 
+#pricing {
+    text-align: center;
+    h2 {
+        color: @text-color;
+                span {
+            color: @green;
+                    font-size: 107%;
+
+        }
+    }
+    p {
+        font-size: 20px;
+                  span {
+     
+
+        }
+    }
+
+}
+
 #home {
     text-align: center;
-    background: #fff url("../images/home.jpg") no-repeat center;
+    background: @blue/* url("../images/home.jpg")*/ no-repeat center;
     background-repeat:no-repeat;
     -webkit-background-size:cover;
     -moz-background-size:cover;
@@ -100,73 +182,117 @@ h3 {
     background-size:cover;
     background-position:center;
     h1 {
-        font-size: 95px;
-        color: #fff;
-        font-weight: 800;
+        max-width: 800px;
+        margin: 0 auto;
+
+        img {
+            max-width: 80%;
+        }
+
     }
     h2 {
 
+        font-weight: 200;
+    }
+
+    p {
+        font-size: 60px;
+        color: #fff;
         font-weight: 200;
     }
 }
 
 #contact {
     padding: 10px;
-    p {
-        color: #fff;
-        padding-top: 25px;
-        font-size: 20px
-            
+    h3 {
+        letter-spacing: -1px;
+        font-size: 50px;
+        line-height: 1.2;
+        span {
+            font-size: 110%;
+            font-weight: 400;
+        }
     }
+
     a {
         color: #fff;
         text-decoration: underline;
     }
-    text-align: center;
-    background: #EB7260;
+    text-align:center;
+    background:#343f51;
     form {
+        margin-top: 30px;
         input {
             padding: 15px 50px;
             outline: none;
             border: 0;
-            
+            border-radius: @border-radius-base;
+            max-width: 100%;
         }
-.email {
-    background: #fff;
-    padding: 20px ;
-    margin-top: 20px;
-    font-size: 20px;
-    color: @dark-blue;
+        .email {
+            background: #fff;
+            font-size: 18px;
+            color: @dark-blue;
+            box-shadow: 0 4px darken(#fff, 10%);
 
-}
-    }    
-}
-
-.btn-cta {
-    margin-top: 45px;
-    background: @light-blue;
-    padding: 15px 60px;
-    font-size: 24px;
-    color: #fff;
-    font-weight: 400;
-    letter-spacing: 1px;
-    &:hover {
-        background: darken(@light-blue, 10%);
-        color: #fff;
+        }
+           @media (max-width: 550px) {
+       input {
+           padding: 15px 5px;
+           width: 100%;
+       }
     }
-    
+    }
+    .twitter {
+        a {
+            text-decoration: none;
+        }
+
+        i {
+            color: @blue; font-size: 55px;
+        }
+        color:#fff;
+        font-size:18px;
+        width: 180px;
+        text-align:center;
+        margin: 45px auto;
+            &:hover {
+
+        .pulse;
+        text-decoration: none;
+
+    }
+    }
 }
 
 
 footer {
-    height: 60px;
-    background: @dark-blue;
+
+        background: @orange;
     color: #fff;
     text-align: center;
-    line-height: 60px;
-    padding: 1px;
-    margin: 1px;
-    
+    padding: 10px 0;
+        img {
+            margin:10px 0;
+            max-width: 100%;
+
+    }
+    span {
+        font-size: 14px;
+            margin-top: 10px;
+    }
+    a {
+        color:#fff;
+
+    }
+     @media (min-width: 550px) {
+        img {
+            max-width: 350px;
+        }
+    }
+    i {
+        color: #fff;
+    }
 }
 
 .half {
@@ -187,8 +313,7 @@ footer {
 
 .half-bg {
     
-    .background("../images/utrecht.jpg");
-
+    background: #12addd;
 }
 
 

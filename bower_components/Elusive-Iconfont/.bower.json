@@ -1,0 +1,22 @@
+{
+  "name": "Elusive-Iconfont",
+  "main": "css/elusive-webfont.css",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "homepage": "https://github.com/aristath/elusive-iconfont",
+  "_release": "a784efff3c",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "a784efff3cddd32f347be474dccfba10771f2693"
+  },
+  "_source": "https://github.com/aristath/elusive-iconfont.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/aristath/elusive-iconfont.git",
+  "_direct": true
+}

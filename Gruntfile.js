@@ -152,18 +152,7 @@ grunt.loadNpmTasks('grunt-gh-pages');
     /*uglify: {
       dist: {}
     },*/
-    rev: {
-      dist: {
-        files: {
-          src: [
-            '<%= yeoman.dist %>/scripts/{,*/}*.js',
-            '<%= yeoman.dist %>/styles/{,*/}*.css',
-            '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
-            '<%= yeoman.dist %>/fonts/{,*/}*.*'
-          ]
-        }
-      }
-    },
+
     useminPrepare: {
       html: '<%= yeoman.app %>/index.html',
       options: {
@@ -182,7 +171,7 @@ grunt.loadNpmTasks('grunt-gh-pages');
         files: [{
           expand: true,
           cwd: '<%= yeoman.app %>/images',
-          src: '{,*/}*.{png,jpg,jpeg}',
+          src: '{,*/}*.{png,jpg,jpeg,svg}',
           dest: '<%= yeoman.dist %>/images'
         }]
       }
@@ -227,10 +216,10 @@ grunt.loadNpmTasks('grunt-gh-pages');
           cwd: '<%= yeoman.app %>',
           dest: '<%= yeoman.dist %>',
           src: [
-            '*.{ico,png,txt}',
+            '*.{ico,png,txt,svg}',
             'fonts/{,*/}*.*',
             '.htaccess',
-            'images/{,*/}*.{webp,gif}'
+            'images/{,*/}*.{webp,gif,svg}'
           ]
         }]
       },
@@ -294,7 +283,6 @@ grunt.loadNpmTasks('grunt-gh-pages');
     'concat',
     'uglify',
     'copy',
-    'rev',
     'usemin'
   ]);
 
