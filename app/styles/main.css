@@ -5962,64 +5962,6 @@ td.visible-print {
   background: #fbad17;
   /* Gecko Browsers */
 }
-@-webkit-keyframes pulse {
-  0% {
-    -webkit-transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(1.02);
-  }
-  100% {
-    -webkit-transform: scale(1);
-  }
-}
-@-moz-keyframes pulse {
-  0% {
-    -moz-transform: scale(1);
-  }
-  50% {
-    -moz-transform: scale(1.02);
-  }
-  100% {
-    -moz-transform: scale(1);
-  }
-}
-@-o-keyframes pulse {
-  0% {
-    -o-transform: scale(1);
-  }
-  50% {
-    -o-transform: scale(1.02);
-  }
-  100% {
-    -o-transform: scale(1);
-  }
-}
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.02);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-.pulse {
-  -webkit-animation-name: pulse;
-  -moz-animation-name: pulse;
-  -o-animation-name: pulse;
-  animation-name: pulse;
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite ;
-  -moz-animation-iteration-count: infinite ;
-  -o-animation-iteration-count: infinite ;
-  animation-iteration-count: infinite ;
-}
 /*
 .btn-cta {
     position: relative;
@@ -6083,14 +6025,16 @@ td.visible-print {
   box-shadow: 0 4px #db9204;
   background: #fcbf49;
   color: #fff;
+  /*      .pulse;*/
+  text-decoration: none;
 }
 .btn-cta:visited {
   color: #fff;
+  text-decoration: none;
 }
-a {
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
+.btn-cta:focus {
+  color: #fff;
+  text-decoration: none;
 }
 .btn-cta:after {
   content: '';
@@ -6106,20 +6050,54 @@ a {
   color: #fff;
 }
 .btn-green {
-  box-shadow: 0 4px #0e88ae;
-  background: #12addd;
-  background: #a5d266;
-}
-.btn-green:hover {
-  box-shadow: 0 4px #0e88ae;
-}
-.btn-green {
   box-shadow: 0 4px #73a230;
   background: #8ec63f;
 }
 .btn-green:hover {
   box-shadow: 0 4px #73a230;
   background: #a5d266;
+}
+.btn-blue {
+  box-shadow: 0 4px #0e88ae;
+  background: #12addd;
+}
+.btn-blue:hover {
+  box-shadow: 0 4px #0e88ae;
+  background: #34c2ee;
+}
+.btn-red {
+  box-shadow: 0 4px #ae340e;
+  background: #dd4212;
+}
+.btn-red:hover {
+  box-shadow: 0 4px #ae340e;
+  background: #ee6034;
+}
+.btn-orange {
+  box-shadow: 0 4px #db9204;
+  background: #fbad17;
+}
+.btn-orange:hover {
+  box-shadow: 0 4px #db9204;
+  background: #fcbf49;
+}
+#btnTop {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  box-shadow: 0 4px #73a230;
+  background: #8ec63f;
+  z-index: 9999;
+  display: none;
+}
+#btnTop:hover {
+  box-shadow: 0 4px #73a230;
+  background: #a5d266;
+}
+a {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .animated {
   -webkit-animation-duration: 1s;
@@ -6245,24 +6223,223 @@ a {
   -o-animation-name: fadeIn;
   animation-name: fadeIn;
 }
-#btnTop {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  box-shadow: 0 4px #0e88ae;
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.02);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+@-moz-keyframes pulse {
+  0% {
+    -moz-transform: scale(1);
+  }
+  50% {
+    -moz-transform: scale(1.02);
+  }
+  100% {
+    -moz-transform: scale(1);
+  }
+}
+@-o-keyframes pulse {
+  0% {
+    -o-transform: scale(1);
+  }
+  50% {
+    -o-transform: scale(1.02);
+  }
+  100% {
+    -o-transform: scale(1);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.pulse {
+  -webkit-animation-name: pulse;
+  -moz-animation-name: pulse;
+  -o-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite ;
+  -moz-animation-iteration-count: infinite ;
+  -o-animation-iteration-count: infinite ;
+  animation-iteration-count: infinite ;
+}
+.branding {
+  max-width: 20000px;
+}
+.branding section h2 {
+  font-size: 30px;
+  color: #343f51;
+  /*        max-width: 400px;
+        text-align: left;
+        margin: 0 auto;*/
+  text-align: left;
+}
+.branding section {
+  height: auto;
+  padding: 100px 0;
+}
+.branding-wrap {
+  max-width: 920px;
+  margin: 0 auto;
+}
+#branding-home {
   background: #12addd;
-  background: #a5d266;
-  box-shadow: 0 4px #73a230;
+  text-align: center;
+  padding: 160px 0;
+}
+#branding-home h2 {
+  color: #fff;
+  margin-top: 40px;
+  text-align: center;
+}
+#branding-home img {
+  max-width: 600px;
+}
+#branding-logo {
+  text-align: center;
   background: #8ec63f;
-  z-index: 9999;
-  display: none;
 }
-#btnTop:hover {
-  box-shadow: 0 4px #0e88ae;
+#branding-logo img {
+  max-width: 100%;
 }
-#btnTop:hover {
-  box-shadow: 0 4px #73a230;
-  background: #a5d266;
+#branding-logo h2 {
+  color: #fff;
+}
+#branding-logo .branding-desc {
+  color: #fff;
+  text-align: left;
+}
+#branding-logo .logo-lg {
+  max-width: 400px;
+  margin: 75px;
+}
+#branding-logo .logo-sm {
+  margin: 40px;
+}
+#branding-ui .branding-buttons {
+  text-align: center;
+}
+#branding-ui .branding-buttons a {
+  margin: 10px 20px;
+  width: 150px;
+}
+#branding-ui .branding-icons {
+  margin-top: 30px;
+  font-size: 70px;
+  text-align: center;
+}
+#branding-ui .branding-icons i {
+  margin: 5px 0;
+}
+#branding-ui .branding-icons .green {
+  color: #8ec63f;
+}
+#branding-ui .branding-icons .orange {
+  color: #fbad17;
+}
+#branding-ui .branding-icons .blue {
+  color: #12addd;
+}
+#branding-ui .branding-icons .red {
+  color: #dd4212;
+}
+#branding-ui .branding-icons li {
+  display: inline-block;
+  text-align: center;
+  width: 150px;
+}
+#branding-ui .branding-icons ul {
+  padding: 0;
+  margin: 0;
+}
+#branding-colors {
+  background: #f6f6f6;
+}
+#branding-colors ul {
+  margin: 0 ;
+  padding: 0;
+  margin-top: 10px;
+}
+#branding-colors li {
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+#branding-colors .brand-color {
+  width: 150px;
+  height: 150px;
+  margin-right: 10px;
+}
+#branding-colors .brand-blue {
+  background: #12addd;
+}
+#branding-colors .brand-dark-blue {
+  background: #343f51;
+}
+#branding-colors .brand-green {
+  background: #8ec63f;
+}
+#branding-colors .brand-orange {
+  background: #fbad17;
+}
+#branding-colors .brand-white {
+  background: #ffffff;
+}
+#branding-colors h3 {
+  color: #343f51;
+  text-align: left;
+}
+.branding-desc {
+  max-width: 400px;
+  margin: 0 auto;
+  font-size: 16px;
+}
+#branding-type {
+  color: #fff;
+  /*  .branding-wrap {
+        max-width: 600px;
+    }*/
+  background: #343f51;
+  padding: 150px 0;
+}
+#branding-type .branding-desc {
+  color: #fff;
+}
+#branding-type h2,
+#branding-type h3,
+#branding-type h4 {
+  color: #fff;
+  text-transform: uppercase;
+}
+#branding-type h3 {
+  font-size: 40px;
+  text-align: left;
+}
+#branding-type h4 {
+  font-size: 25px;
+  font-weight: 200;
+}
+#branding-type .branding-body {
+  font-size: 16px;
 }
 body {
   max-width: 2300px;
@@ -6470,31 +6647,23 @@ h3 {
 }
 #contact .twitter {
   color: #fff;
-  font-size: 18px;
-  width: 180px;
+  font-size: 15px;
   text-align: center;
   margin: 45px auto;
 }
 #contact .twitter a {
   text-decoration: none;
+  text-transform: lowercase;
+  line-height: 36px;
+  padding: 3px 7px;
 }
 #contact .twitter i {
-  color: #12addd;
-  font-size: 55px;
+  color: #fff;
+  font-size: 25px;
+  line-height: 36px;
+  vertical-align: middle;
 }
 #contact .twitter:hover {
-  -webkit-animation-name: pulse;
-  -moz-animation-name: pulse;
-  -o-animation-name: pulse;
-  animation-name: pulse;
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite ;
-  -moz-animation-iteration-count: infinite ;
-  -o-animation-iteration-count: infinite ;
-  animation-iteration-count: infinite ;
   text-decoration: none;
 }
 footer {

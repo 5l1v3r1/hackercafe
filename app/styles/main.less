@@ -4,6 +4,8 @@
 
 @import "global";
 @import "buttons";
+@import "animation";
+@import "branding";
 @icon-font-path: "../fonts/glyphicons/";
 
 @font-family-sans-serif:  "Open Sans","Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -246,25 +248,25 @@ h3 {
     .twitter {
         a {
             text-decoration: none;
+            text-transform: lowercase;
+            line-height: 36px;
+            padding: 3px 7px;
         }
-
         i {
-            color: @blue; font-size: 55px;
+            color: #fff;
+            font-size: 25px;
+            line-height: 36px;
+            vertical-align: middle;
         }
         color:#fff;
-        font-size:18px;
-        width: 180px;
+        font-size:15px;
         text-align:center;
         margin: 45px auto;
-            &:hover {
-
-        .pulse;
-        text-decoration: none;
-
-    }
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
-
 
 footer {
 
@@ -321,4 +323,5 @@ footer {
     width: 49%;
 }
     }
+
 
