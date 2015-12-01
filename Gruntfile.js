@@ -64,7 +64,7 @@ module.exports = function (grunt) {
             options: {
                 logConcurrentOutput: true
             },
-            server: {
+            dev: {
                 tasks: ["watch", "shell:server"]
             },
             build: {
