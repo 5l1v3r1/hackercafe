@@ -6,7 +6,7 @@
 - npm install
 - bower install
 
-## Develovpment
+## Development
 
 - grunt serve
 
