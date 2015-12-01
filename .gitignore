@@ -10,7 +10,9 @@ lib-cov
 pids
 logs
 results
+
 dist
+public
 
 bower_components
 node_modules

@@ -88,10 +88,19 @@ module.exports = function (grunt) {
         },
         clean: {
             dist: ["dist/"]
+        },
+
+
+        'gh-pages': {
+            options: {
+                base: 'dist'
+            },
+            src: ['**']
         }
+
     });
 
     grunt.registerTask('serve', ['concurrent:dev', 'env:server', 'open:devserver']);
-    grunt.registerTask('build', ['sass:dist', 'clean:dist', 'shell:build', 'useminPrepare' ,'concat:generated' ,'cssmin:generated','uglify:generated','usemin']);
-    grunt.registerTask('deploy', ['shell:build', 'shell:deploy']);
+    grunt.registerTask('build', ['sass:dist', 'clean:dist', 'shell:build', 'useminPrepare', 'concat:generated', 'cssmin:generated', 'uglify:generated', 'usemin']);
+    grunt.registerTask('deploy', ['build', 'gh-pages']);
 };

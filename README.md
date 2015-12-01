@@ -16,4 +16,4 @@
 
 ## Deploy 
 
-- grunt gh-pages
+- grunt deploy
