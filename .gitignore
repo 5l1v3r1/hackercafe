@@ -19,3 +19,5 @@ node_modules
 .sass-cache
 .tmp
 .grunt  
+
+static/css/main.css.map
