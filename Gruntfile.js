@@ -95,7 +95,9 @@ module.exports = function (grunt) {
             options: {
                 base: 'dist'
             },
-            src: ['**']
+            publish: {
+                src: ['**']
+            }
         }
 
     });
