@@ -20,4 +20,4 @@ node_modules
 .tmp
 .grunt  
 
-static/css/main.css.map
+*.map
